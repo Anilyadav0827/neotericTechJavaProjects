@@ -1,0 +1,27 @@
+Static method OverRiding:
+
+No, we cannot override static methods because method overriding is based on dynamic binding at runtime and the static methods are bonded using static binding at compile time. So, we cannot override static methods
+
+However, you can hide a static method in a subclass by declaring another static method with the same signature. This is called method hiding rather than method overriding. When you call the static method through a reference of the subclass type, the method in the subclass will be invoked instead of the one in the superclass.
+
+ if do upCasting we get the super class methods
+
+Satic method overloading:
+ satic method overloading is possible in java 
+
+class loaders:
+
+Class loaders are responsible for loading Java classes dynamically to the JVM (Java Virtual Machine) during runtime. They’re also part of the JRE (Java Runtime Environment). Therefore, the JVM doesn’t need to know about the underlying files or file systems in order to run Java programs
+As we can see, there are three different class loaders here: application, extension, and bootstrap (displayed as null).
+
+The application class loader loads the class where the example method is contained. An application or system class loader loads our own files in the classpath.
+
+Next, the extension class loader loads the DriverManager class. Extension class loaders load classes that are an extension of the standard core Java classes.
+
+Finally, the bootstrap class loader loads the ArrayList class. A bootstrap or primordial class loader is the parent of all the others.
+
+However, we can see that for the ArrayList, it displays null in the output. This is because the bootstrap class loader is written in native code, not Java, so it doesn’t show up as a Java class. As a result, the behavior of the bootstrap class loader will differ across JVMs.
+
+
+
+
